@@ -9,12 +9,15 @@ import java.util.List;
 
 @Service
 public class BoloService {
-
     @Autowired
     private BoloRepository boloRepository;
 
-
     public List<Bolo> buscarTodos() {
         return boloRepository.findAll();
+    }
+
+    public Bolo createBolo(Bolo bolo) {
+        return boloRepository.save(bolo);
+
     }
 }

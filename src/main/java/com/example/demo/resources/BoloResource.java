@@ -6,6 +6,7 @@ import com.example.demo.entities.Bolo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +26,11 @@ public class BoloResource {
         return ResponseEntity.ok().body(todoMundo);
     }
 
-
+    @PostMapping
+    public ResponseEntity<Bolo> criarBolo(Bolo bolo) {
+        Bolo boloCriado = boloService.createBolo(bolo);
+        return ResponseEntity.ok().body(boloCriado);
+    }
 
 
 /*

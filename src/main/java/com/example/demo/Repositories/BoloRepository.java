@@ -7,6 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BoloRepository extends JpaRepository<Bolo, Integer> {
 
-
 }
 

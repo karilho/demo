@@ -15,7 +15,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 public class DocinhoDeFesta {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
