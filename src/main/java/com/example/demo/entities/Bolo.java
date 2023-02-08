@@ -1,18 +1,16 @@
 package com.example.demo.entities;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-@Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "tb_bolo")
+@Entity
 public class Bolo  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +22,6 @@ public class Bolo  {
 
     private String forma;
 
-    private String valor;
+    private Double valor;
 
 }

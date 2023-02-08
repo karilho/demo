@@ -16,8 +16,10 @@ public class BoloService {
         return boloRepository.findAll();
     }
 
-    public Bolo createBolo(Bolo bolo) {
+    public Bolo buscarPorId(Integer id) {
+            return boloRepository.findById(id).get();
+    }
+    public Bolo salvar(Bolo bolo) {
         return boloRepository.save(bolo);
-
     }
 }

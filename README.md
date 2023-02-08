@@ -11,3 +11,17 @@ Para rodar a aplicação, você vai precisar de:
 
 **OBS: O banco de dados é criado automaticamente, não é necessário criar o banco de dados manualmente
 ** Para visualizar o banco de dados, usamos o DBEAVER.
+
+-----------------------------------------------------------------------------------------------------------------
+
+EXISTEM 4 TIPOS DE REQUISIÇÕES HTTP
+
+GET - POST - PUT - DELETE
+
+Uma aplicação que realiza um CRUD, deve ser capaz de realizar essas 4 requisições WEB.
+
+    C - CREATE - CRIA A INFORMAÇÃO NO DB - POST
+    R - READ - EXIBE A INFORMAÇÃO DO DB - GET
+    U - UPDATE - ATUALIZA A INFORMAÇÃO - PUT
+    D - DELETE - DELETA A INFORMAÇÃO  - DELETE
+

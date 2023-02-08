@@ -5,10 +5,8 @@ import com.example.demo.Services.BoloService;
 import com.example.demo.entities.Bolo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,19 +25,9 @@ public class BoloResource {
     }
 
     @PostMapping
-    public ResponseEntity<Bolo> criarBolo(Bolo bolo) {
-        Bolo boloCriado = boloService.createBolo(bolo);
+    @RequestMapping(value = "/criar")
+    public ResponseEntity<Bolo> criarBolo(@RequestBody Bolo bolo) {
+        Bolo boloCriado = boloService.salvar(bolo);
         return ResponseEntity.ok().body(boloCriado);
     }
-
-
-/*
-    EXISTEM 4 TIPOS
-
-    C - CREATE - CRIA A INFORMAÇÃO NO DB - POST
-    R - READ - EXIBE A INFORMAÇÃO DO DB - GET
-    U - UPDATE - ATUALIZA A INFORMAÇÃO - PUT
-    D - DELETE - DELETA A INFORMAÇÃO  - DELETE
-*/
-
 }
